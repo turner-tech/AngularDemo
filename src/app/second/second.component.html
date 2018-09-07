@@ -1,0 +1,28 @@
+
+<div class="row">
+
+  <div class="col-4 offset-4">
+    <ul class="list-group">
+
+      <li class="list-group-item" *ngFor="let hero of heroes " [ngClass] = "{ 'text-success' : hero === 'Hulk' }" >{{ hero }}
+
+      <button class="button" class="close" (click) = "deleteHero(hero)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </li>
+      <li class="list-group-item">
+        <button class="btn btn-info" (click) = "showTextInput()">Add More</button>
+      </li>
+
+      <li class="list-group-item" *ngIf ="adding">
+        <input type="text" class="form-control" [(ngModel)] = "inputHero" [disabled]=btnDisable>
+        <br>
+        <button class="btn btn-success" [disabled]=!inputHero (click) = "changeHero()">Add My Hero</button>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+
+
