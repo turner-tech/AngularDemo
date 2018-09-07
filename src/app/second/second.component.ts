@@ -18,7 +18,7 @@ export class SecondComponent implements OnInit {
   changeHero() {
     this.heroes[this.heroes.length] = this.inputHero;
     this.inputHero = null;
-    this.adding = false;
+    //this.adding = false;
   }
 
   deleteHero(hero) {

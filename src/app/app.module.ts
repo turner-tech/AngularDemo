@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { SecondComponent } from './second/second.component';
 
 import {RouterModule, Routes} from '@angular/router';
+import { AboutComponent } from './about/about.component';
 
 const routeList: Routes = [{path: '', component: SecondComponent },
   {path: 'home', component: AppComponent },
-  {path: 'heroes', component: SecondComponent}
+  {path: 'heroes', component: SecondComponent},
+  {path: 'about', component: AboutComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    SecondComponent
+    SecondComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
